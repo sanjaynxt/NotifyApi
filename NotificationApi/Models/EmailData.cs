@@ -4,14 +4,14 @@
     {
         public EmailData()
         {
-            url = "https://dev-orderflow.foboh.com.au";
+            //url = "https://dev-orderflow.foboh.com.au";
         }
         public string key { get; set; }
         public string type { get; set; }
-        public string url { get; set; }
+        //public string url { get; set; }
         public string name { get; set; }
         public string To { get; set; }
-        public string From { get; set; }
+        //public string From { get; set; }
         //public string Body { get; set; }
 
     }
