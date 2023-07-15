@@ -21,7 +21,7 @@ namespace NotificationApi.Controllers
 
         [HttpPost]
         [Route("api/notify/sendmail")]
-        public EmailResponse SendEmail(EmailData ed)
+        public EmailResponse SendEmail([FromBody] EmailData ed)
         {
             var auth = new Emailer(_configuration);
             var resp = auth.SendEMail(ed);

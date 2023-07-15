@@ -18,12 +18,12 @@ namespace NotificationApi.BL
             string from = _configuration["UserEmail"].ToString();
             var resp = new EmailResponse();
             resp.key = key;
-            if (ed.type == "email-verification")
+            if (ed.mailtype == "email-verification")
             {
                 subject = "Registration Link - FOBOH";
                 html_body = PrepareMessage("1", key);
             }
-            else if (ed.type == "password-reset")
+            else if (ed.mailtype == "password-reset")
             {
                 subject = "Reset your Password";
                 html_body = PrepareMessage("2", key, ed.name);
